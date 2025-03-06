@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas:
+        "header header"
+        "left main"
+        "footer footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+.header h1 {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.left {
+    grid-area: left;
+    display: flex;
+    background-color: aqua;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+}
+
+.main .fruit-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: lightgray;
+}
+
+.main .fruit-card .image {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    width: 120px;
+    height: 150px;
+    background-color: white;
+    text-align: center;
+}
+
+.main .fruit-card .info {
+    width: 100px;
+    height: 80px;
+    background-color: brown;
+}
+
+.main .fruit-card .nutritions {
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+.footer .copyright {
+    color: white;
+}
