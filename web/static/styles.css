@@ -1,11 +1,13 @@
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 100px 1fr 50px;
     grid-template-areas:
         "header header"
@@ -32,6 +34,8 @@ body {
 .left {
     grid-area: left;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: aqua;
 }
 
@@ -43,35 +47,52 @@ body {
     background-color: blueviolet;
 }
 
-.main .fruit-card {
+.fruit-card {
+    background-color: lightgrey;
+    border-radius: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px;
-    background-color: lightgray;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 20px auto;
 }
 
-.main .fruit-card .image {
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    width: 120px;
-    height: 150px;
-    background-color: white;
+.image {
+    width: 100%;
+    height: 200px;
+    background-color: grey;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.info, .nutritions {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.main .fruit-card .info {
-    width: 100px;
-    height: 80px;
-    background-color: brown;
+.info {
+    background-color: aquamarine;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
-.main .fruit-card .nutritions {
-    width: 100px;
-    height: 100px;
-    background-color: palevioletred;
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.nutritions{
+    background-color: pink;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .footer {
